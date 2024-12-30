@@ -23,10 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <NavigationBar></NavigationBar>
       <body
         className={inter.className}
-      >
+        >
+        <NavigationBar></NavigationBar>
         {children}
       </body>
     </html>

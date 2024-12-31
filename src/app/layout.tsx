@@ -1,4 +1,4 @@
-import { qatarBold, qatarMeduim, qatarThin } from "./components/Fonts";
+import { qatarMeduim } from "./components/Fonts";
 import NavigationBar from "./components/NavigationBar";
 import "./globals.css";
 
@@ -12,7 +12,7 @@ import { ReactNode } from 'react';
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={qatarBold.className}>
+      <body className={qatarMeduim.className}>
         <NavigationBar />
         {children}
       </body>

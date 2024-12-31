@@ -13,6 +13,10 @@ export default {
         foreground: "var(--foreground)",
         primary: '#57453F',
       },
+      fontFamily: {
+        sans: ['inter', 'sans-serif'],
+        serif: ['Qatar2022Arabic-Bold', 'serif'],
+      },
     },
   },
   plugins: [],

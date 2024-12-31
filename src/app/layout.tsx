@@ -1,32 +1,19 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { qatarBold, qatarMeduim, qatarThin } from "./components/Fonts";
 import NavigationBar from "./components/NavigationBar";
+import "./globals.css";
 
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight : ["400", "500", "600", "700"],
-});
-
-
-
-export const metadata: Metadata = {
+export const metadata = {
   title: "Tayf Bio - طيف بيو",
   description: "طيف - لمسة من الطبيعة إلى جمالك -- Tayf - A touch of nature to your beauty",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+import { ReactNode } from 'react';
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={inter.className}
-        >
-        <NavigationBar></NavigationBar>
+      <body className={qatarBold.className}>
+        <NavigationBar />
         {children}
       </body>
     </html>

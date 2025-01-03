@@ -1,11 +1,15 @@
 import Hero from "./components/Hero";
 import FavouriteProducts from "./components/FavouriteProducts";
+import { Product } from "../../types/index";
+import { fetchProducts } from "../../lib/fetchProducts";
 
+export default async function Home() {
+  const products: Product[] = await fetchProducts();
 
-export default function Home() {
-  return (<div>
-    <Hero></Hero>
-    <FavouriteProducts></FavouriteProducts>
-      </div>
+  return (
+    <div>
+      <Hero></Hero>
+      <FavouriteProducts products={products}></FavouriteProducts>
+    </div>
   );
 }
